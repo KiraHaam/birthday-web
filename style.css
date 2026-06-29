@@ -1,0 +1,547 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap');
+
+:root{
+    --bg:#2D141E;
+    --surface:#401C2B;
+    --text:#FDE8E9;
+    --text-muted:#D4A8B5;
+    --accent:#E2859B;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+#particles{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+}
+
+/* ===========================
+   SECTION
+=========================== */
+
+section{
+    width:100%;
+    min-height:100vh;
+    padding:100px 25px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.subtitle{
+
+    color:var(--text-muted);
+
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+
+    letter-spacing:6px;
+
+    margin-bottom:25px;
+
+}
+
+h1{
+
+    font-size:70px;
+    font-family:'Playfair Display',serif;
+    font-weight:600;
+
+    line-height:1.2;
+
+}
+
+h2{
+
+    font-size:60px;
+    color:var(--accent);
+
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+
+    margin-top:15px;
+
+}
+
+#hero p{
+
+    max-width:600px;
+
+    margin-top:35px;
+
+    color:var(--text-muted);
+
+    line-height:1.8;
+
+}
+
+.heart{
+
+    font-size:90px;
+
+    margin-top:60px;
+
+    animation:heartbeat 1.8s infinite;
+
+}
+
+.scroll{
+
+    margin-top:60px;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    color:var(--text-muted);
+
+}
+
+/* ===========================
+   AGE
+=========================== */
+
+.counter{
+    margin-top: 60px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+}
+
+.counter-row{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+
+}
+
+.box{
+
+    width:110px;
+
+    height:120px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    backdrop-filter:blur(12px);
+
+}
+
+.box span{
+
+    font-size:40px;
+
+    font-family:'Playfair Display',serif;
+
+}
+
+.box p{
+
+    margin-top:10px;
+
+    color:var(--text-muted);
+
+    font-size:13px;
+
+}
+
+/* ===========================
+   LETTER
+=========================== */
+
+#letter{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+#letter p{
+
+    margin-top:25px;
+
+    color:var(--text-muted);
+
+    line-height:2;
+
+    max-width:700px;
+
+}
+
+.signature{
+
+    color:var(--accent)!important;
+
+    font-style:italic;
+
+    font-size:20px;
+
+}
+
+/* ===========================
+   LOVE
+=========================== */
+
+.cards{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    width:100%;
+
+    max-width:700px;
+
+}
+
+.card{
+
+    aspect-ratio:1;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--accent);
+
+}
+
+.card span{
+
+    font-size:40px;
+
+    color:var(--accent);
+
+}
+
+/* ===========================
+   SEASON
+=========================== */
+
+.season-grid{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    width:100%;
+
+    max-width:950px;
+
+}
+
+.season-card{
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:40px 20px;
+
+    transition:.35s;
+
+}
+
+.season-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.season-card h3{
+
+    font-family:'Playfair Display',serif;
+
+    margin-bottom:15px;
+
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery-grid{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    width:100%;
+
+    max-width:800px;
+
+}
+
+.gallery-grid img,
+.gallery-grid video{
+
+    width:100%;
+
+    border-radius:18px;
+
+    object-fit:cover;
+
+    aspect-ratio:4/5;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+
+    margin-top:40px;
+
+    background:var(--accent);
+
+    color:white;
+
+    border:none;
+
+    padding:15px 40px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================
+   MUSIC PLAYER
+=========================== */
+
+#musicPlayer{
+
+    position:fixed;
+
+    bottom:25px;
+
+    left:25px;
+
+    width:260px;
+
+    background:rgba(64,28,43,.85);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:20px;
+
+    padding:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+#musicPlayer img{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:12px;
+
+    object-fit:cover;
+
+}
+
+.music-info{
+
+    flex:1;
+
+}
+
+.music-info h3{
+
+    font-size:16px;
+
+}
+
+.music-info p{
+
+    color:var(--text-muted);
+
+    font-size:13px;
+
+}
+
+#playPause{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    padding:0;
+
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes heartbeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:42px;
+
+    }
+
+    h2{
+
+        font-size:36px;
+
+    }
+
+    .cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .season-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #musicPlayer{
+
+        width:90%;
+        left:5%;
+
+    }
+
+}
